@@ -1,0 +1,22 @@
+{
+  "name": "oauth-sdk-example",
+  "version": "1.0.0",
+  "description": "Example integration of PlayAd OAuth SDK",
+  "main": "integration.js",
+  "scripts": {
+    "start": "node integration.js"
+  },
+  "keywords": [
+    "oauth",
+    "example"
+  ],
+  "author": "PlayAd",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongoose": "^7.4.0",
+    "playad-oauth-sdk": "file:../"
+  }
+}
