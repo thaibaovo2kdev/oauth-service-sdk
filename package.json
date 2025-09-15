@@ -1,6 +1,6 @@
 {
-  "name": "playad-oauth-sdk",
-  "version": "1.0.2",
+  "name": "oauth-service-sdk",
+  "version": "1.0.3",
   "description": "SDK for handling Google and Apple OAuth authentication",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "auth",
     "sdk"
   ],
-  "author": "PlayAd",
+  "author": "Thai Bao Vo <thaibaovo2kdev@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.4.0",
@@ -37,6 +37,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/playad/oauth-sdk.git"
+    "url": "git+https://github.com/thaibaovo2kdev/oauth-service-sdk.git"
   }
 }

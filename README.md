@@ -1,4 +1,4 @@
-# PlayAd OAuth SDK
+# OAuth Service SDK
 
 A Node.js SDK providing core utilities for Google and Apple OAuth authentication in PlayAd games and applications. This SDK offers essential functions for token retrieval, verification, and user information fetching to help implement OAuth flows.
 
@@ -253,6 +253,7 @@ app.listen(3000, () => {
 Get Google OAuth token from authorization code. This function exchanges an authorization code for access and ID tokens from Google's OAuth 2.0 server.
 
 **Parameters:**
+
 - `options` (Object): Options for Google OAuth
   - `code` (string): The authorization code received from Google
   - `clientId` (string): Google OAuth client ID
@@ -262,10 +263,12 @@ Get Google OAuth token from authorization code. This function exchanges an autho
   - `tokenUrl` (string, optional): URL to get tokens (default: 'https://oauth2.googleapis.com/token')
 
 **Default Scopes:**
+
 - https://www.googleapis.com/auth/userinfo.email
 - https://www.googleapis.com/auth/userinfo.profile
 
 **Returns:** Promise that resolves to the token response from Google, which includes:
+
 - `access_token`: The access token for API calls
 - `id_token`: The ID token containing user information
 - `refresh_token`: Token to refresh the access token when it expires
@@ -277,12 +280,14 @@ Get Google OAuth token from authorization code. This function exchanges an autho
 Get Google user information from tokens. This function retrieves detailed user information using the provided tokens.
 
 **Parameters:**
+
 - `options` (Object): Options for getting user info
   - `idToken` (string): The ID token from Google
   - `accessToken` (string): The access token from Google
   - `userInfoUrl` (string, optional): URL to get user info (default: 'https://www.googleapis.com/oauth2/v3/userinfo')
 
 **Returns:** Promise that resolves to the user information from Google, which typically includes:
+
 - `sub`: The unique user identifier
 - `name`: The user's full name
 - `given_name`: The user's first name
@@ -299,6 +304,7 @@ Get Google user information from tokens. This function retrieves detailed user i
 Verify Apple identity token. This function validates the identity token issued by Apple by verifying its signature using Apple's public keys.
 
 **Parameters:**
+
 - `options` (Object or string): Options for verification
   - If string: The identity token from Apple
   - If object:
@@ -312,6 +318,7 @@ Verify Apple identity token. This function validates the identity token issued b
 Get Apple public key for token verification.
 
 **Parameters:**
+
 - `kid` (string): Key ID from Apple token header
 - `client` (Object, optional): JWKS client instance
 
@@ -322,6 +329,7 @@ Get Apple public key for token verification.
 Generate a random string, useful for state parameters in OAuth flows.
 
 **Parameters:**
+
 - `length` (number): The length of the random string to generate
 
 **Returns:** A random string of the specified length
@@ -345,6 +353,7 @@ The SDK implements comprehensive error handling:
 - API errors from Google are properly propagated with details
 
 Example:
+
 ```javascript
 try {
   const tokens = await oauthSdk.google.getToken({
@@ -363,6 +372,7 @@ try {
 - Detailed error messages help with debugging
 
 Example:
+
 ```javascript
 try {
   const payload = await oauthSdk.apple.verifyIdentityToken(identityToken);
