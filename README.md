@@ -5,7 +5,7 @@ A Node.js SDK providing core utilities for Google and Apple OAuth authentication
 ## Installation
 
 ```bash
-npm install playad-oauth-sdk
+npm install oauth-service-sdk
 ```
 
 ### Requirements

@@ -1,6 +1,6 @@
 {
   "name": "oauth-service-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "SDK for handling Google and Apple OAuth authentication",
   "main": "index.js",
   "scripts": {
